@@ -2,7 +2,6 @@ import LoginSectionComponent from "../components/loginSection/LoginSection.Compo
 
 const LoginPageComponent = () => {
     return (
-        
         <LoginSectionComponent/>
     )
 }
