@@ -1,17 +1,32 @@
-
+import { useState } from "react";
 const LoginSectionComponent = () => {
+    const[singInObj,setSingObj] = useState({
+        email:"",
+        password:""
+    })
+    const handleSingInObj = (e)=>{
+        console.log(e)
+    }
     return (
         <>
             <h1 className="page-title">Log in is to your account </h1>
-            <div> 
-                <div class="form-floating mb-3">
+            <div className="form-wrapper"> 
+                <div className="login-form">
+                <div className="form-floating mb-3">
                     <label for="floatingInput">Email adress</label>
-                    <input type="email" class="form-control" id="floatingInput" placeholder="Name"/>
+                    <input type="email" 
+                    class="form-control"
+                     id="floatingInput"
+                     onChange={(e)=>handleSingInObj(e)}
+                      placeholder="Name"/>
                 </div>
-                <div class="form-floating">
+                <div className="form-floating">
                     <label for="floatingPassword">Password</label>
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
-
+                    <input type="password"
+                     class="form-control"
+                      id="floatingPassword"
+                       placeholder="Password"/>
+                </div>
                 </div>
             </div>
         </>
